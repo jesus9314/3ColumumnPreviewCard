@@ -1,0 +1,107 @@
+:root{
+   --lexend: 'Lexend Deca', sans-serif;
+   --bigShoulder : 'Big Shoulders Display', cursive;
+   --brightOrange: hsl(31, 77%, 52%);
+   --darkCyan: hsl(184, 100%, 22%);
+   --veryDarkCyan: hsl(179, 100%, 13%);
+   --transparentWhite: hsla(0, 0%, 100%, 0.75);
+   --veryLightGray: hsl(0, 0%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--veryLightGray);
+    font-size: 15px;
+    font-family: var(--lexend);
+    color: var(--transparentWhite);
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.car__section{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    height: 400px;
+    justify-content: space-between;
+}
+.content{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: 250px;
+}
+.content > h2{
+    font-family: var(--bigShoulder);
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.content > p {
+    line-height: 1.5;
+}
+.car__section > button{
+    border: none;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 40px;
+    font-family: var(--bigShoulder);
+    letter-spacing: 2px;
+    font-weight: 700;
+    border: 1px solid var(--transparentWhite);
+    cursor: pointer;
+}
+.car__section > button:hover{
+    color: var(--transparentWhite);
+    background-color: rgba(255, 255, 255, 0)
+}
+.section__first{
+    background-color: var(--brightOrange);
+}
+.section__first > button{
+    color: var(--brightOrange);
+}
+.section__second{
+    background-color: var(--darkCyan);    
+}
+.section__second > button{
+    color: var(--darkCyan);
+}
+.section__third{
+    background-color: var(--veryDarkCyan);    
+}
+.section__third > button{
+    color: var(--veryDarkCyan);
+}
+@media (min-width: 1000px){
+    .main{
+        height: 100vh;
+    }
+    .card{
+        flex-direction: row;
+        width: 80%;
+        max-width: 900px;
+    }
+    .car__section{
+        gap: 0;
+    }
+    .content{
+        justify-content: space-evenly;
+        height: 80%;
+    }
+}
